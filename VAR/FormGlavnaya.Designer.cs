@@ -106,6 +106,7 @@
             this.buttonClients.TabIndex = 15;
             this.buttonClients.Text = "Данные о клиентах";
             this.buttonClients.UseVisualStyleBackColor = false;
+            this.buttonClients.Click += new System.EventHandler(this.buttonClients_Click);
             // 
             // buttonOrders
             // 

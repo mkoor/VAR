@@ -14,20 +14,13 @@ namespace VAR
     
     public partial class OrdersSet
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public OrdersSet()
-        {
-            this.ClientsSet = new HashSet<ClientsSet>();
-        }
-    
         public int Id { get; set; }
         public int IdClient { get; set; }
         public int IdAutopart { get; set; }
-        public Nullable<int> IdStaff { get; set; }
+        public int IdStaff { get; set; }
     
         public virtual AutopartsSet AutopartsSet { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClientsSet> ClientsSet { get; set; }
+        public virtual ClientsSet ClientsSet { get; set; }
         public virtual StaffSet StaffSet { get; set; }
     }
 }

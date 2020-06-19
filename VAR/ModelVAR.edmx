@@ -24,7 +24,6 @@
           <Property Name="LastName" Type="nvarchar(max)" />
           <Property Name="FirstName" Type="nvarchar(max)" />
           <Property Name="Phone" Type="nvarchar(max)" />
-          <Property Name="IdOrder" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DepartmentsSet">
           <Key>
@@ -42,7 +41,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdClient" Type="int" Nullable="false" />
           <Property Name="IdAutopart" Type="int" Nullable="false" />
-          <Property Name="IdStaff" Type="int" />
+          <Property Name="IdStaff" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="StaffSet">
           <Key>
@@ -86,18 +85,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ClientsSet_OrdersSet">
-          <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="1" />
-          <End Role="ClientsSet" Type="Self.ClientsSet" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="OrdersSet">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ClientsSet">
-              <PropertyRef Name="IdOrder" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_OrdersSet_AutopartsSet">
           <End Role="AutopartsSet" Type="Self.AutopartsSet" Multiplicity="1" />
           <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="*" />
@@ -110,8 +97,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_OrdersSet_ClientsSet">
+          <End Role="ClientsSet" Type="Self.ClientsSet" Multiplicity="1" />
+          <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientsSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrdersSet">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_OrdersSet_StaffSet">
-          <End Role="StaffSet" Type="Self.StaffSet" Multiplicity="0..1" />
+          <End Role="StaffSet" Type="Self.StaffSet" Multiplicity="1" />
           <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="StaffSet">
@@ -146,12 +145,12 @@
             <End Role="SuppliersSet" EntitySet="SuppliersSet" />
             <End Role="AutopartsSet" EntitySet="AutopartsSet" />
           </AssociationSet>
-          <AssociationSet Name="FK_ClientsSet_OrdersSet" Association="Self.FK_ClientsSet_OrdersSet">
-            <End Role="OrdersSet" EntitySet="OrdersSet" />
-            <End Role="ClientsSet" EntitySet="ClientsSet" />
-          </AssociationSet>
           <AssociationSet Name="FK_OrdersSet_AutopartsSet" Association="Self.FK_OrdersSet_AutopartsSet">
             <End Role="AutopartsSet" EntitySet="AutopartsSet" />
+            <End Role="OrdersSet" EntitySet="OrdersSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersSet_ClientsSet" Association="Self.FK_OrdersSet_ClientsSet">
+            <End Role="ClientsSet" EntitySet="ClientsSet" />
             <End Role="OrdersSet" EntitySet="OrdersSet" />
           </AssociationSet>
           <AssociationSet Name="FK_OrdersSet_StaffSet" Association="Self.FK_OrdersSet_StaffSet">
@@ -189,8 +188,7 @@
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IdOrder" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="OrdersSet" Relationship="Self.FK_ClientsSet_OrdersSet" FromRole="ClientsSet" ToRole="OrdersSet" />
+          <NavigationProperty Name="OrdersSet" Relationship="Self.FK_OrdersSet_ClientsSet" FromRole="ClientsSet" ToRole="OrdersSet" />
         </EntityType>
         <EntityType Name="DepartmentsSet">
           <Key>
@@ -209,9 +207,9 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdClient" Type="Int32" Nullable="false" />
           <Property Name="IdAutopart" Type="Int32" Nullable="false" />
-          <Property Name="IdStaff" Type="Int32" />
+          <Property Name="IdStaff" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AutopartsSet" Relationship="Self.FK_OrdersSet_AutopartsSet" FromRole="OrdersSet" ToRole="AutopartsSet" />
-          <NavigationProperty Name="ClientsSet" Relationship="Self.FK_ClientsSet_OrdersSet" FromRole="OrdersSet" ToRole="ClientsSet" />
+          <NavigationProperty Name="ClientsSet" Relationship="Self.FK_OrdersSet_ClientsSet" FromRole="OrdersSet" ToRole="ClientsSet" />
           <NavigationProperty Name="StaffSet" Relationship="Self.FK_OrdersSet_StaffSet" FromRole="OrdersSet" ToRole="StaffSet" />
         </EntityType>
         <EntityType Name="StaffSet">
@@ -271,15 +269,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ClientsSet_OrdersSet">
-          <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="1" />
-          <End Role="ClientsSet" Type="Self.ClientsSet" Multiplicity="*" />
+        <Association Name="FK_OrdersSet_ClientsSet">
+          <End Role="ClientsSet" Type="Self.ClientsSet" Multiplicity="1" />
+          <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="OrdersSet">
+            <Principal Role="ClientsSet">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="ClientsSet">
-              <PropertyRef Name="IdOrder" />
+            <Dependent Role="OrdersSet">
+              <PropertyRef Name="IdClient" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -296,7 +294,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_OrdersSet_StaffSet">
-          <End Role="StaffSet" Type="Self.StaffSet" Multiplicity="0..1" />
+          <End Role="StaffSet" Type="Self.StaffSet" Multiplicity="1" />
           <End Role="OrdersSet" Type="Self.OrdersSet" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="StaffSet">
@@ -323,9 +321,9 @@
             <End Role="AutopartsSet" EntitySet="AutopartsSet" />
             <End Role="OrdersSet" EntitySet="OrdersSet" />
           </AssociationSet>
-          <AssociationSet Name="FK_ClientsSet_OrdersSet" Association="Self.FK_ClientsSet_OrdersSet">
-            <End Role="OrdersSet" EntitySet="OrdersSet" />
+          <AssociationSet Name="FK_OrdersSet_ClientsSet" Association="Self.FK_OrdersSet_ClientsSet">
             <End Role="ClientsSet" EntitySet="ClientsSet" />
+            <End Role="OrdersSet" EntitySet="OrdersSet" />
           </AssociationSet>
           <AssociationSet Name="FK_StaffSet_DepartmentsSet" Association="Self.FK_StaffSet_DepartmentsSet">
             <End Role="DepartmentsSet" EntitySet="DepartmentsSet" />
@@ -361,7 +359,6 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

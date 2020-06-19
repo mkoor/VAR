@@ -59,5 +59,11 @@ namespace VAR
             FormStaff formStaff = new FormStaff();
             formStaff.Show();
         }
+
+        private void buttonClients_Click(object sender, EventArgs e)
+        {
+            FormClients formClients = new FormClients();
+            formClients.Show();
+        }
     }
 }
