@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4b9be60533f8437588d0fca558da69d8" Name="Diagram1">
+        <EntityTypeShape EntityType="VARModel.AutopartsSet" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.ClientsSet" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.DepartmentsSet" Width="1.5" PointX="2.625" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.OrdersSet" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.StaffSet" Width="1.5" PointX="5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.SuppliersSet" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.Users" Width="1.5" PointX="7.375" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="VARModel.FK_AutopartsSet_SuppliersSet" ManuallyRouted="false" />
+        <AssociationConnector Association="VARModel.FK_OrdersSet_AutopartsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="VARModel.FK_ClientsSet_OrdersSet" ManuallyRouted="false" />
+        <AssociationConnector Association="VARModel.FK_StaffSet_DepartmentsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="VARModel.FK_OrdersSet_StaffSet" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
