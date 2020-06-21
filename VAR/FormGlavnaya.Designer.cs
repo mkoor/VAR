@@ -35,8 +35,7 @@
             this.buttonSuppliers = new System.Windows.Forms.Button();
             this.buttonClients = new System.Windows.Forms.Button();
             this.buttonOrders = new System.Windows.Forms.Button();
-            this.buttonStaff = new System.Windows.Forms.Button();
-            this.buttonDepartments = new System.Windows.Forms.Button();
+            this.buttonManager = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -65,6 +64,7 @@
             this.buttonOrderBy.TabIndex = 12;
             this.buttonOrderBy.Text = "Оформление заказа";
             this.buttonOrderBy.UseVisualStyleBackColor = false;
+            this.buttonOrderBy.Click += new System.EventHandler(this.buttonOrderBy_Click);
             // 
             // buttonAutoparts
             // 
@@ -120,34 +120,21 @@
             this.buttonOrders.TabIndex = 16;
             this.buttonOrders.Text = "Данные о заказах";
             this.buttonOrders.UseVisualStyleBackColor = false;
+            this.buttonOrders.Click += new System.EventHandler(this.buttonOrders_Click);
             // 
-            // buttonStaff
+            // buttonManager
             // 
-            this.buttonStaff.BackColor = System.Drawing.Color.Red;
-            this.buttonStaff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStaff.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStaff.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonStaff.Location = new System.Drawing.Point(24, 394);
-            this.buttonStaff.Name = "buttonStaff";
-            this.buttonStaff.Size = new System.Drawing.Size(268, 44);
-            this.buttonStaff.TabIndex = 17;
-            this.buttonStaff.Text = "Данные о сотрудниках";
-            this.buttonStaff.UseVisualStyleBackColor = false;
-            this.buttonStaff.Click += new System.EventHandler(this.buttonStaff_Click);
-            // 
-            // buttonDepartments
-            // 
-            this.buttonDepartments.BackColor = System.Drawing.Color.Red;
-            this.buttonDepartments.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDepartments.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDepartments.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonDepartments.Location = new System.Drawing.Point(24, 444);
-            this.buttonDepartments.Name = "buttonDepartments";
-            this.buttonDepartments.Size = new System.Drawing.Size(268, 44);
-            this.buttonDepartments.TabIndex = 18;
-            this.buttonDepartments.Text = "Данные об отделах";
-            this.buttonDepartments.UseVisualStyleBackColor = false;
-            this.buttonDepartments.Click += new System.EventHandler(this.buttonDepartments_Click);
+            this.buttonManager.BackColor = System.Drawing.Color.Red;
+            this.buttonManager.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonManager.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonManager.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonManager.Location = new System.Drawing.Point(24, 394);
+            this.buttonManager.Name = "buttonManager";
+            this.buttonManager.Size = new System.Drawing.Size(268, 55);
+            this.buttonManager.TabIndex = 17;
+            this.buttonManager.Text = "Данные о менеджерах и администраторах";
+            this.buttonManager.UseVisualStyleBackColor = false;
+            this.buttonManager.Click += new System.EventHandler(this.buttonStaff_Click);
             // 
             // buttonExit
             // 
@@ -155,7 +142,7 @@
             this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonExit.Location = new System.Drawing.Point(92, 502);
+            this.buttonExit.Location = new System.Drawing.Point(90, 460);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(123, 44);
             this.buttonExit.TabIndex = 19;
@@ -178,10 +165,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(314, 564);
+            this.ClientSize = new System.Drawing.Size(314, 518);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonDepartments);
-            this.Controls.Add(this.buttonStaff);
+            this.Controls.Add(this.buttonManager);
             this.Controls.Add(this.buttonOrders);
             this.Controls.Add(this.buttonClients);
             this.Controls.Add(this.buttonSuppliers);
@@ -209,8 +195,7 @@
         private System.Windows.Forms.Button buttonSuppliers;
         private System.Windows.Forms.Button buttonClients;
         private System.Windows.Forms.Button buttonOrders;
-        private System.Windows.Forms.Button buttonStaff;
-        private System.Windows.Forms.Button buttonDepartments;
+        private System.Windows.Forms.Button buttonManager;
         private System.Windows.Forms.Button buttonExit;
     }
 }

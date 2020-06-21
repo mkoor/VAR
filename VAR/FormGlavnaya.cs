@@ -15,7 +15,7 @@ namespace VAR
         public FormGlavnaya()
         {
             InitializeComponent();
-            if (FormAuthorization.users.type == "manager") { buttonDepartments.Enabled = false; buttonSuppliers.Enabled = false; }
+            if (FormAuthorization.users.type == "manager") { buttonManager.Enabled = false; }
             labelHello.Text = "Здравствуйте, " + FormAuthorization.users.login;
         }
 
@@ -48,22 +48,28 @@ namespace VAR
             formSuppliers.Show();
         }
 
-        private void buttonDepartments_Click(object sender, EventArgs e)
-        {
-            FormDepartments formDepartments = new FormDepartments();
-            formDepartments.Show();
-        }
-
         private void buttonStaff_Click(object sender, EventArgs e)
         {
-            FormStaff formStaff = new FormStaff();
-            formStaff.Show();
+            FormManager formManager = new FormManager();
+            formManager.Show();
         }
 
         private void buttonClients_Click(object sender, EventArgs e)
         {
             FormClients formClients = new FormClients();
             formClients.Show();
+        }
+
+        private void buttonOrderBy_Click(object sender, EventArgs e)
+        {
+            FormOrderClient formOrderClient = new FormOrderClient();
+            formOrderClient.Show();
+        }
+
+        private void buttonOrders_Click(object sender, EventArgs e)
+        {
+            FormOrders formOrders = new FormOrders();
+            formOrders.Show();
         }
     }
 }

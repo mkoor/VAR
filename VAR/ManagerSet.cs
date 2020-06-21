@@ -12,20 +12,24 @@ namespace VAR
     using System;
     using System.Collections.Generic;
     
-    public partial class DepartmentsSet
+    public partial class ManagerSet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DepartmentsSet()
+        public ManagerSet()
         {
-            this.StaffSet = new HashSet<StaffSet>();
+            this.OrdersSet = new HashSet<OrdersSet>();
         }
     
         public int Id { get; set; }
-        public string NameDepartment { get; set; }
-        public Nullable<int> Persons { get; set; }
-        public string Director { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string Telephone { get; set; }
+        public string Email { get; set; }
+        public int IdUser { get; set; }
+        public string Type { get; set; }
     
+        public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StaffSet> StaffSet { get; set; }
+        public virtual ICollection<OrdersSet> OrdersSet { get; set; }
     }
 }

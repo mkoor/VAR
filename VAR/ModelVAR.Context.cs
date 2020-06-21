@@ -27,9 +27,8 @@ namespace VAR
     
         public virtual DbSet<AutopartsSet> AutopartsSet { get; set; }
         public virtual DbSet<ClientsSet> ClientsSet { get; set; }
-        public virtual DbSet<DepartmentsSet> DepartmentsSet { get; set; }
+        public virtual DbSet<ManagerSet> ManagerSet { get; set; }
         public virtual DbSet<OrdersSet> OrdersSet { get; set; }
-        public virtual DbSet<StaffSet> StaffSet { get; set; }
         public virtual DbSet<SuppliersSet> SuppliersSet { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }

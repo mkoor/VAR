@@ -4,19 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5eeb3e6f3f0e4d23946f78925743c855" Name="Diagram1" ZoomLevel="95">
+      <Diagram DiagramId="51fdcd1aabb04c119d2d6f49910232d8" Name="Diagram1">
         <EntityTypeShape EntityType="VARModel.AutopartsSet" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="VARModel.ClientsSet" Width="1.5" PointX="7.375" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="VARModel.DepartmentsSet" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.ClientsSet" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.ManagerSet" Width="1.5" PointX="5.125" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="VARModel.OrdersSet" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="VARModel.StaffSet" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="VARModel.SuppliersSet" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="VARModel.Users" Width="1.5" PointX="7.375" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.SuppliersSet" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VARModel.Users" Width="1.5" PointX="2.5" PointY="4.375" IsExpanded="true" />
         <AssociationConnector Association="VARModel.FK_AutopartsSet_SuppliersSet" ManuallyRouted="false" />
         <AssociationConnector Association="VARModel.FK_OrdersSet_AutopartsSet" ManuallyRouted="false" />
         <AssociationConnector Association="VARModel.FK_OrdersSet_ClientsSet" ManuallyRouted="false" />
-        <AssociationConnector Association="VARModel.FK_StaffSet_DepartmentsSet" ManuallyRouted="false" />
-        <AssociationConnector Association="VARModel.FK_OrdersSet_StaffSet" ManuallyRouted="false" />
+        <AssociationConnector Association="VARModel.FK_ManagerSet_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VARModel.FK_OrdersSet_ManagerSet" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

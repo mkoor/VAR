@@ -48,10 +48,10 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFirstName.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.Location = new System.Drawing.Point(12, 166);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(264, 22);
+            this.textBoxFirstName.Size = new System.Drawing.Size(264, 24);
             this.textBoxFirstName.TabIndex = 115;
             // 
             // buttonDel
@@ -98,10 +98,10 @@
             // 
             // textBoxTelephone
             // 
-            this.textBoxTelephone.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxTelephone.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxTelephone.Location = new System.Drawing.Point(12, 216);
             this.textBoxTelephone.Name = "textBoxTelephone";
-            this.textBoxTelephone.Size = new System.Drawing.Size(264, 22);
+            this.textBoxTelephone.Size = new System.Drawing.Size(264, 24);
             this.textBoxTelephone.TabIndex = 111;
             // 
             // labelPhone
@@ -118,10 +118,10 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLastName.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.Location = new System.Drawing.Point(12, 116);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(264, 22);
+            this.textBoxLastName.Size = new System.Drawing.Size(264, 24);
             this.textBoxLastName.TabIndex = 109;
             // 
             // labelLastName

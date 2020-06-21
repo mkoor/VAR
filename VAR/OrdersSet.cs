@@ -17,10 +17,10 @@ namespace VAR
         public int Id { get; set; }
         public int IdClient { get; set; }
         public int IdAutopart { get; set; }
-        public int IdStaff { get; set; }
+        public int IdManager { get; set; }
     
         public virtual AutopartsSet AutopartsSet { get; set; }
         public virtual ClientsSet ClientsSet { get; set; }
-        public virtual StaffSet StaffSet { get; set; }
+        public virtual ManagerSet ManagerSet { get; set; }
     }
 }

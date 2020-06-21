@@ -144,18 +144,18 @@
             // 
             // textBoxNameAutoparts
             // 
-            this.textBoxNameAutoparts.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxNameAutoparts.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxNameAutoparts.Location = new System.Drawing.Point(16, 169);
             this.textBoxNameAutoparts.Name = "textBoxNameAutoparts";
-            this.textBoxNameAutoparts.Size = new System.Drawing.Size(264, 22);
+            this.textBoxNameAutoparts.Size = new System.Drawing.Size(264, 24);
             this.textBoxNameAutoparts.TabIndex = 72;
             // 
             // textBoxManufacturer
             // 
-            this.textBoxManufacturer.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxManufacturer.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxManufacturer.Location = new System.Drawing.Point(16, 266);
             this.textBoxManufacturer.Name = "textBoxManufacturer";
-            this.textBoxManufacturer.Size = new System.Drawing.Size(264, 22);
+            this.textBoxManufacturer.Size = new System.Drawing.Size(264, 24);
             this.textBoxManufacturer.TabIndex = 74;
             // 
             // labelManufacturer
@@ -214,19 +214,19 @@
             // 
             // textBoxAutoBrand
             // 
-            this.textBoxAutoBrand.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAutoBrand.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxAutoBrand.Location = new System.Drawing.Point(16, 217);
             this.textBoxAutoBrand.Name = "textBoxAutoBrand";
-            this.textBoxAutoBrand.Size = new System.Drawing.Size(264, 22);
+            this.textBoxAutoBrand.Size = new System.Drawing.Size(264, 24);
             this.textBoxAutoBrand.TabIndex = 78;
             // 
             // comboBoxSuppliers
             // 
-            this.comboBoxSuppliers.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxSuppliers.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxSuppliers.FormattingEnabled = true;
             this.comboBoxSuppliers.Location = new System.Drawing.Point(16, 318);
             this.comboBoxSuppliers.Name = "comboBoxSuppliers";
-            this.comboBoxSuppliers.Size = new System.Drawing.Size(264, 22);
+            this.comboBoxSuppliers.Size = new System.Drawing.Size(264, 25);
             this.comboBoxSuppliers.TabIndex = 80;
             // 
             // label1
@@ -243,10 +243,10 @@
             // 
             // textBoxCategory
             // 
-            this.textBoxCategory.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCategory.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxCategory.Location = new System.Drawing.Point(16, 120);
             this.textBoxCategory.Name = "textBoxCategory";
-            this.textBoxCategory.Size = new System.Drawing.Size(264, 22);
+            this.textBoxCategory.Size = new System.Drawing.Size(264, 24);
             this.textBoxCategory.TabIndex = 81;
             // 
             // label2

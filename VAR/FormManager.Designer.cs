@@ -1,6 +1,6 @@
 ﻿namespace VAR
 {
-    partial class FormStaff
+    partial class FormManager
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStaff));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManager));
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
@@ -38,27 +38,30 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
-            this.listViewStaff = new System.Windows.Forms.ListView();
-            this.IdStaff = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewManager = new System.Windows.Forms.ListView();
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Telephone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Logo = new System.Windows.Forms.PictureBox();
+            this.Login = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.comboBoxDepartments = new System.Windows.Forms.ComboBox();
-            this.labelDepartments = new System.Windows.Forms.Label();
-            this.Department = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxLogin = new System.Windows.Forms.ComboBox();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.labelType = new System.Windows.Forms.Label();
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxType = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFirstName.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.Location = new System.Drawing.Point(16, 158);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(264, 22);
+            this.textBoxFirstName.Size = new System.Drawing.Size(264, 24);
             this.textBoxFirstName.TabIndex = 104;
             // 
             // buttonDel
@@ -67,7 +70,7 @@
             this.buttonDel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonDel.Location = new System.Drawing.Point(645, 373);
+            this.buttonDel.Location = new System.Drawing.Point(612, 437);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(200, 44);
             this.buttonDel.TabIndex = 103;
@@ -81,7 +84,7 @@
             this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEdit.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEdit.Location = new System.Drawing.Point(343, 373);
+            this.buttonEdit.Location = new System.Drawing.Point(320, 437);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(200, 44);
             this.buttonEdit.TabIndex = 102;
@@ -95,7 +98,7 @@
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonAdd.Location = new System.Drawing.Point(41, 373);
+            this.buttonAdd.Location = new System.Drawing.Point(36, 437);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(200, 44);
             this.buttonAdd.TabIndex = 101;
@@ -105,10 +108,10 @@
             // 
             // textBoxTelephone
             // 
-            this.textBoxTelephone.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxTelephone.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxTelephone.Location = new System.Drawing.Point(16, 208);
             this.textBoxTelephone.Name = "textBoxTelephone";
-            this.textBoxTelephone.Size = new System.Drawing.Size(264, 22);
+            this.textBoxTelephone.Size = new System.Drawing.Size(264, 24);
             this.textBoxTelephone.TabIndex = 100;
             // 
             // labelPhone
@@ -125,10 +128,10 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLastName.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.Location = new System.Drawing.Point(16, 108);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(264, 22);
+            this.textBoxLastName.Size = new System.Drawing.Size(264, 24);
             this.textBoxLastName.TabIndex = 98;
             // 
             // labelLastName
@@ -155,31 +158,32 @@
             this.labelFirstName.TabIndex = 96;
             this.labelFirstName.Text = "Имя*";
             // 
-            // listViewStaff
+            // listViewManager
             // 
-            this.listViewStaff.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.IdStaff,
+            this.listViewManager.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id,
             this.FirstLastName,
             this.Telephone,
             this.Email,
-            this.Department});
-            this.listViewStaff.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listViewStaff.FullRowSelect = true;
-            this.listViewStaff.GridLines = true;
-            this.listViewStaff.HideSelection = false;
-            this.listViewStaff.Location = new System.Drawing.Point(300, 12);
-            this.listViewStaff.MultiSelect = false;
-            this.listViewStaff.Name = "listViewStaff";
-            this.listViewStaff.Size = new System.Drawing.Size(579, 319);
-            this.listViewStaff.TabIndex = 95;
-            this.listViewStaff.UseCompatibleStateImageBehavior = false;
-            this.listViewStaff.View = System.Windows.Forms.View.Details;
-            this.listViewStaff.SelectedIndexChanged += new System.EventHandler(this.listViewStaff_SelectedIndexChanged);
+            this.Login,
+            this.Type});
+            this.listViewManager.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewManager.FullRowSelect = true;
+            this.listViewManager.GridLines = true;
+            this.listViewManager.HideSelection = false;
+            this.listViewManager.Location = new System.Drawing.Point(300, 12);
+            this.listViewManager.MultiSelect = false;
+            this.listViewManager.Name = "listViewManager";
+            this.listViewManager.Size = new System.Drawing.Size(533, 378);
+            this.listViewManager.TabIndex = 95;
+            this.listViewManager.UseCompatibleStateImageBehavior = false;
+            this.listViewManager.View = System.Windows.Forms.View.Details;
+            this.listViewManager.SelectedIndexChanged += new System.EventHandler(this.listViewStaff_SelectedIndexChanged);
             // 
-            // IdStaff
+            // Id
             // 
-            this.IdStaff.Text = "Id сотрудника";
-            this.IdStaff.Width = 80;
+            this.Id.Text = "Id ";
+            this.Id.Width = 33;
             // 
             // FirstLastName
             // 
@@ -189,28 +193,24 @@
             // Telephone
             // 
             this.Telephone.Text = "Номер телефона";
-            this.Telephone.Width = 151;
+            this.Telephone.Width = 125;
             // 
             // Email
             // 
             this.Email.Text = "Почта";
+            this.Email.Width = 94;
             // 
-            // Logo
+            // Login
             // 
-            this.Logo.Image = global::VAR.Properties.Resources.Лого1;
-            this.Logo.Location = new System.Drawing.Point(12, 12);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(268, 68);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 94;
-            this.Logo.TabStop = false;
+            this.Login.Text = "Логин";
+            this.Login.Width = 72;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.Location = new System.Drawing.Point(16, 258);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(264, 22);
+            this.textBoxEmail.Size = new System.Drawing.Size(264, 24);
             this.textBoxEmail.TabIndex = 106;
             // 
             // labelEmail
@@ -225,30 +225,26 @@
             this.labelEmail.TabIndex = 105;
             this.labelEmail.Text = "Почта";
             // 
-            // comboBoxDepartments
+            // comboBoxLogin
             // 
-            this.comboBoxDepartments.Font = new System.Drawing.Font("Roboto Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxDepartments.FormattingEnabled = true;
-            this.comboBoxDepartments.Location = new System.Drawing.Point(16, 308);
-            this.comboBoxDepartments.Name = "comboBoxDepartments";
-            this.comboBoxDepartments.Size = new System.Drawing.Size(264, 22);
-            this.comboBoxDepartments.TabIndex = 108;
+            this.comboBoxLogin.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxLogin.FormattingEnabled = true;
+            this.comboBoxLogin.Location = new System.Drawing.Point(16, 308);
+            this.comboBoxLogin.Name = "comboBoxLogin";
+            this.comboBoxLogin.Size = new System.Drawing.Size(264, 25);
+            this.comboBoxLogin.TabIndex = 108;
             // 
-            // labelDepartments
+            // labelLogin
             // 
-            this.labelDepartments.AutoSize = true;
-            this.labelDepartments.BackColor = System.Drawing.Color.Transparent;
-            this.labelDepartments.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDepartments.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelDepartments.Location = new System.Drawing.Point(12, 283);
-            this.labelDepartments.Name = "labelDepartments";
-            this.labelDepartments.Size = new System.Drawing.Size(69, 22);
-            this.labelDepartments.TabIndex = 107;
-            this.labelDepartments.Text = "Отдел*";
-            // 
-            // Department
-            // 
-            this.Department.Text = "Отдел";
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogin.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelLogin.Location = new System.Drawing.Point(12, 283);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(69, 22);
+            this.labelLogin.TabIndex = 107;
+            this.labelLogin.Text = "Логин*";
             // 
             // label2
             // 
@@ -256,21 +252,58 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(149, 341);
+            this.label2.Location = new System.Drawing.Point(140, 403);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(589, 22);
+            this.label2.Size = new System.Drawing.Size(594, 22);
             this.label2.TabIndex = 109;
-            this.label2.Text = "! при изменении любой записи необходимо повторно выбирать отдел";
+            this.label2.Text = "! при изменении любой записи необходимо повторно выбирать логин ";
             // 
-            // FormStaff
+            // Logo
+            // 
+            this.Logo.Image = global::VAR.Properties.Resources.Лого1;
+            this.Logo.Location = new System.Drawing.Point(12, 12);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(268, 68);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 94;
+            this.Logo.TabStop = false;
+            // 
+            // labelType
+            // 
+            this.labelType.AutoSize = true;
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
+            this.labelType.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelType.Location = new System.Drawing.Point(12, 340);
+            this.labelType.Name = "labelType";
+            this.labelType.Size = new System.Drawing.Size(166, 22);
+            this.labelType.TabIndex = 110;
+            this.labelType.Text = "Тип пользователя*";
+            // 
+            // Type
+            // 
+            this.Type.Text = "Тип польз-ля";
+            this.Type.Width = 121;
+            // 
+            // textBoxType
+            // 
+            this.textBoxType.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxType.Location = new System.Drawing.Point(16, 366);
+            this.textBoxType.Name = "textBoxType";
+            this.textBoxType.Size = new System.Drawing.Size(264, 24);
+            this.textBoxType.TabIndex = 111;
+            // 
+            // FormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(892, 429);
+            this.ClientSize = new System.Drawing.Size(848, 496);
+            this.Controls.Add(this.textBoxType);
+            this.Controls.Add(this.labelType);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBoxDepartments);
-            this.Controls.Add(this.labelDepartments);
+            this.Controls.Add(this.comboBoxLogin);
+            this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.textBoxFirstName);
@@ -282,11 +315,11 @@
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.labelFirstName);
-            this.Controls.Add(this.listViewStaff);
+            this.Controls.Add(this.listViewManager);
             this.Controls.Add(this.Logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormStaff";
-            this.Text = "Данные о сотрудниках";
+            this.Name = "FormManager";
+            this.Text = "Данные о менеджерах и администраторах";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -304,17 +337,20 @@
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.ListView listViewStaff;
-        private System.Windows.Forms.ColumnHeader IdStaff;
+        private System.Windows.Forms.ListView listViewManager;
+        private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader FirstLastName;
         private System.Windows.Forms.ColumnHeader Telephone;
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.ComboBox comboBoxDepartments;
-        private System.Windows.Forms.Label labelDepartments;
-        private System.Windows.Forms.ColumnHeader Department;
+        private System.Windows.Forms.ComboBox comboBoxLogin;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.ColumnHeader Login;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelType;
+        private System.Windows.Forms.ColumnHeader Type;
+        private System.Windows.Forms.TextBox textBoxType;
     }
 }
