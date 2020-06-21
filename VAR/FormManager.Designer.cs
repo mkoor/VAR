@@ -49,10 +49,10 @@
             this.comboBoxLogin = new System.Windows.Forms.ComboBox();
             this.labelLogin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.labelType = new System.Windows.Forms.Label();
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxType = new System.Windows.Forms.TextBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,16 +258,6 @@
             this.label2.TabIndex = 109;
             this.label2.Text = "! при изменении любой записи необходимо повторно выбирать логин ";
             // 
-            // Logo
-            // 
-            this.Logo.Image = global::VAR.Properties.Resources.Лого1;
-            this.Logo.Location = new System.Drawing.Point(12, 12);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(268, 68);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 94;
-            this.Logo.TabStop = false;
-            // 
             // labelType
             // 
             this.labelType.AutoSize = true;
@@ -292,6 +282,16 @@
             this.textBoxType.Name = "textBoxType";
             this.textBoxType.Size = new System.Drawing.Size(264, 24);
             this.textBoxType.TabIndex = 111;
+            // 
+            // Logo
+            // 
+            this.Logo.Image = global::VAR.Properties.Resources.Лого1;
+            this.Logo.Location = new System.Drawing.Point(12, 12);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(268, 68);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 94;
+            this.Logo.TabStop = false;
             // 
             // FormManager
             // 
@@ -319,6 +319,7 @@
             this.Controls.Add(this.Logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Данные о менеджерах и администраторах";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
