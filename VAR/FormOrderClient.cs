@@ -48,14 +48,14 @@ namespace VAR
 
                 Program.varr.ClientsSet.Add(clientsSet);
                 Program.varr.SaveChanges();
+
+                MessageBox.Show("Клиент успешно добавлен!", "Клиент добавлен",
+                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormOrderBy formOrderBy = new FormOrderBy();
+                formOrderBy.Show();
+                this.Hide();
             }
             catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-
-            MessageBox.Show("Клиент успешно добавлен!", "Клиент добавлен",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FormOrderBy formOrderBy = new FormOrderBy();
-            formOrderBy.Show();
-            this.Hide();
         }
     }
 }

@@ -60,7 +60,8 @@ namespace VAR
                 ListViewItem item = new ListViewItem(new string[]
                 {
                     ordersSet.Id.ToString(),
-                    ordersSet.ManagerSet.Id.ToString()+". "+ordersSet.ManagerSet.Users.Login,
+                    ordersSet.ManagerSet.IdUser.ToString()+". "+
+                    ordersSet.ManagerSet.Users.Login,
                     ordersSet.AutopartsSet.Id.ToString()+". "+ordersSet.AutopartsSet.NameAutopart,
                     ordersSet.ClientsSet.Id.ToString()+". "+ordersSet.ClientsSet.LastName+" "+ordersSet.ClientsSet.FirstName
                 });
@@ -147,7 +148,8 @@ namespace VAR
             {
                 OrdersSet ordersSet = listViewOrders.SelectedItems[0].Tag as OrdersSet;
 
-                comboBoxManager.Text = ordersSet.IdManager.ToString()+". "+ordersSet.ManagerSet.Users.Login;
+                comboBoxManager.Text = ordersSet.IdManager.ToString()+". "+ordersSet.ManagerSet.IdUser.ToString()+
+                    ". "+ordersSet.ManagerSet.Users.Login;
                 comboBoxAutoparts.Text = ordersSet.IdAutopart.ToString() + ". " + ordersSet.AutopartsSet.NameAutopart;
                 comboBoxClient.Text = ordersSet.IdClient.ToString() + ". " + ordersSet.ClientsSet.LastName +
                     " " + ordersSet.ClientsSet.FirstName;

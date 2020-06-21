@@ -25,7 +25,7 @@ namespace VAR
             comboBoxManager.Items.Clear();
             foreach (Users users in Program.varr.Users)
             {
-                string[] item = { users.Id.ToString()+". ", users.Login };
+                string[] item = { users.Id.ToString() + ". ", users.Login };
                 comboBoxManager.Items.Add(string.Join(" ", item));
             }
         }
@@ -62,7 +62,7 @@ namespace VAR
             {
                 OrdersSet ordersSet = new OrdersSet();
 
-                if (comboBoxAutoparts.Text == " " || comboBoxClient.Text == " " || comboBoxManager.Text == " ")
+                if (comboBoxAutoparts.SelectedItem == null || comboBoxClient.SelectedItem == null || comboBoxManager.SelectedItem == null)
                 {
                     throw new Exception("Обязательные данные не заполнены");
                 }
@@ -75,12 +75,12 @@ namespace VAR
 
                 Program.varr.OrdersSet.Add(ordersSet);
                 Program.varr.SaveChanges();
+
+                MessageBox.Show("Заказ успешно оформлен!", "Заказ оформлен",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
             }
             catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-
-            MessageBox.Show("Заказ успешно оформлен!", "Заказ оформлен",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
         }
 
         private void labelManager_Click(object sender, EventArgs e)
