@@ -142,7 +142,7 @@
             this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonExit.Location = new System.Drawing.Point(90, 460);
+            this.buttonExit.Location = new System.Drawing.Point(92, 468);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(123, 44);
             this.buttonExit.TabIndex = 19;
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(314, 518);
+            this.ClientSize = new System.Drawing.Size(314, 524);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonManager);
             this.Controls.Add(this.buttonOrders);
