@@ -25,7 +25,7 @@ namespace VAR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGlavnaya());
+            Application.Run(new FormAuthorization());
         }
     }
 }
