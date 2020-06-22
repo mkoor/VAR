@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAR", "VAR\VAR.csproj", "{65AB2E13-D3F5-4ED0-934C-1D966B6838F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNagruzochny", "TestNagruzochny\TestNagruzochny.csproj", "{56CC6693-11F0-47F8-A91B-DA2D10BE7A71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{933FB2FB-8035-44FB-95FF-8C33712B6BB4}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{65AB2E13-D3F5-4ED0-934C-1D966B6838F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65AB2E13-D3F5-4ED0-934C-1D966B6838F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65AB2E13-D3F5-4ED0-934C-1D966B6838F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CC6693-11F0-47F8-A91B-DA2D10BE7A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CC6693-11F0-47F8-A91B-DA2D10BE7A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CC6693-11F0-47F8-A91B-DA2D10BE7A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CC6693-11F0-47F8-A91B-DA2D10BE7A71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
